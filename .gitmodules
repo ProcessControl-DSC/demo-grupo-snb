@@ -1,0 +1,4 @@
+[submodule "oca/commission"]
+	path = oca/commission
+	url = https://github.com/OCA/commission.git
+	branch = 19.0
