@@ -3,7 +3,7 @@
 {
     "name": "PC CRM to Task",
     "summary": "Create project tasks from CRM leads/opportunities with multi-level defaults",
-    "version": "19.0.1.0.1",
+    "version": "19.0.1.0.2",
     "category": "Sales/CRM",
     "author": "Process Control",
     "website": "https://www.processcontrol.es",
