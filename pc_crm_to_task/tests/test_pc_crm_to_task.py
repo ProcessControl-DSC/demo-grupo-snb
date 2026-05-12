@@ -239,3 +239,57 @@ class TestPcCrmToTask(TransactionCase):
         lead._pc_create_task()
         lead._pc_create_task()
         self.assertEqual(lead.pc_task_count, 2)
+
+    # ------------------------------------------------------------------
+    # 15. Post-init hook backfills existing companies
+    # ------------------------------------------------------------------
+    def test_15_post_init_backfills_existing_companies(self):
+        """post_init_hook fills pc_mail_template_id and pc_activity_type_id
+        on companies that already existed before the module was installed."""
+        from odoo.addons.pc_crm_to_task.hooks import post_init_hook
+
+        # Create a company simulating one preexisting (clear the defaults to
+        # mimic the pre-install state)
+        company = self.env["res.company"].create({
+            "name": "PcTest preexisting company",
+        })
+        company.write({
+            "pc_mail_template_id": False,
+            "pc_activity_type_id": False,
+        })
+        self.assertFalse(company.pc_mail_template_id)
+        self.assertFalse(company.pc_activity_type_id)
+
+        post_init_hook(self.env)
+
+        company.invalidate_recordset(
+            ["pc_mail_template_id", "pc_activity_type_id"]
+        )
+        self.assertTrue(
+            company.pc_mail_template_id,
+            "Mail template should be backfilled",
+        )
+        self.assertTrue(
+            company.pc_activity_type_id,
+            "Activity type should be backfilled",
+        )
+
+    def test_16_post_init_does_not_override_existing(self):
+        """post_init_hook does NOT overwrite a company that already has
+        a template configured (admin's manual choices stay)."""
+        from odoo.addons.pc_crm_to_task.hooks import post_init_hook
+
+        custom_tmpl = self.env["mail.template"].create({
+            "name": "Custom template",
+            "model_id": self.env.ref("project.model_project_task").id,
+            "subject": "Custom",
+        })
+        company = self.env["res.company"].create({
+            "name": "PcTest configured company",
+            "pc_mail_template_id": custom_tmpl.id,
+        })
+
+        post_init_hook(self.env)
+
+        company.invalidate_recordset(["pc_mail_template_id"])
+        self.assertEqual(company.pc_mail_template_id, custom_tmpl)
