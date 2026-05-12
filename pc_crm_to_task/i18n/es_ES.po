@@ -338,7 +338,7 @@ msgid ""
 " at CRM team or CRM stage level."
 msgstr ""
 "Proyecto por defecto usado al crear una tarea desde una oportunidad CRM. "
-"Puede sobreescribirse a nivel de equipo CRM o de etapa CRM."
+"Puede sobrescribirse a nivel de equipo CRM o de etapa CRM."
 
 #. module: pc_crm_to_task
 #: model:ir.model.fields,field_description:pc_crm_to_task.field_res_config_settings__pc_crm_to_task_responsible_strategy
@@ -520,7 +520,7 @@ msgstr "Plantilla de correo de notificación"
 #. module: pc_crm_to_task
 #: model:ir.model.fields,field_description:pc_crm_to_task.field_crm_team__pc_mail_template_id
 msgid "Notification mail template (override)"
-msgstr "Plantilla de correo de notificación (sobreescribe la de empresa)"
+msgstr "Plantilla de correo de notificación (sobrescribe la de empresa)"
 
 #. module: pc_crm_to_task
 #: model_terms:ir.ui.view,arch_db:pc_crm_to_task.view_crm_lead_to_task_wizard_form
@@ -769,7 +769,7 @@ msgid ""
 "Project where the task is created when no override exists at team or stage "
 "level."
 msgstr ""
-"Proyecto en el que se crea la tarea cuando no hay sobreescritura a nivel de "
+"Proyecto en el que se crea la tarea cuando no hay sobrescritura a nivel de "
 "equipo o de etapa."
 
 #. module: pc_crm_to_task
