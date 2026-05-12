@@ -41,7 +41,7 @@ Configuración
 1. Ir a *Ajustes > CRM > CRM → Task (Process Control)*.
 2. Definir el modo de comportamiento, la estrategia de responsables y los
    valores por defecto a nivel empresa (proyecto, responsables, etapa, etiquetas).
-3. (Opcional) En *CRM > Configuración > Equipos*, sobreescribir los defaults
+3. (Opcional) En *CRM > Configuración > Equipos*, sobrescribir los defaults
    de empresa para un equipo concreto.
 4. (Opcional) En *CRM > Configuración > Etapas*, marcar las etapas que deben
    crear tarea automáticamente al recibir un lead, y elegir el proyecto destino.
