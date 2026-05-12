@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_crm_stage_form_inherit_pc_crm_to_task" model="ir.ui.view">
+        <field name="name">crm.stage.form.inherit.pc_crm_to_task</field>
+        <field name="model">crm.stage</field>
+        <field name="inherit_id" ref="crm.crm_stage_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="inside">
+                <group string="CRM → Task automation">
+                    <field name="pc_auto_create_task"/>
+                    <field name="pc_auto_task_project_id"
+                           invisible="not pc_auto_create_task"/>
+                    <field name="pc_auto_task_send_mail"
+                           invisible="not pc_auto_create_task"/>
+                    <field name="pc_auto_task_create_activity"
+                           invisible="not pc_auto_create_task"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

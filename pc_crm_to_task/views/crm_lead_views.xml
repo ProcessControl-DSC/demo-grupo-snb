@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_crm_lead_form_inherit_pc_crm_to_task" model="ir.ui.view">
+        <field name="name">crm.lead.form.inherit.pc_crm_to_task</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button name="action_pc_view_tasks"
+                        type="object"
+                        class="oe_stat_button"
+                        icon="fa-tasks"
+                        invisible="pc_task_count == 0">
+                    <field name="pc_task_count" widget="statinfo" string="Tasks"/>
+                </button>
+            </xpath>
+
+            <xpath expr="//header" position="inside">
+                <button name="action_pc_create_task"
+                        type="object"
+                        string="Create task"
+                        class="btn-secondary"
+                        groups="project.group_project_user"/>
+            </xpath>
+
+        </field>
+    </record>
+
+</odoo>

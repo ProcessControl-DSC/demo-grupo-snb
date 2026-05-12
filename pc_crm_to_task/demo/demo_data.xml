@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <!-- Demo project + stage for the auto-creation showcase -->
+    <record id="demo_project_crm_to_task" model="project.project">
+        <field name="name">Sales Engineering (demo)</field>
+        <field name="active" eval="True"/>
+        <field name="privacy_visibility">followers</field>
+    </record>
+
+    <!-- Configure company defaults so the wizard pre-fills out of the box -->
+    <function model="res.company" name="write" eval="(
+        [ref('base.main_company')],
+        {
+            'pc_default_project_id': ref('demo_project_crm_to_task'),
+        }
+    )"/>
+
+    <!-- Mark the 'Won' stage as auto-create-task for the demo -->
+    <function model="crm.stage" name="write" eval="(
+        [ref('crm.stage_lead4')],
+        {
+            'pc_auto_create_task': True,
+            'pc_auto_task_project_id': ref('demo_project_crm_to_task'),
+            'pc_auto_task_send_mail': True,
+            'pc_auto_task_create_activity': True,
+        }
+    )"/>
+
+</odoo>
