@@ -1,0 +1,289 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* pc_crm_to_task
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-12 00:00+0000\n"
+"PO-Revision-Date: 2026-05-12 00:00+0000\n"
+"Last-Translator: Process Control\n"
+"Language-Team: Spanish (Spain)\n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: pc_crm_to_task
+msgid "Always open wizard"
+msgstr "Abrir siempre el asistente"
+
+#. module: pc_crm_to_task
+msgid "Archive lead"
+msgstr "Archivar oportunidad"
+
+#. module: pc_crm_to_task
+msgid "Archive lead on convert"
+msgstr "Archivar oportunidad al convertir"
+
+#. module: pc_crm_to_task
+msgid "Assignees"
+msgstr "Responsables"
+
+#. module: pc_crm_to_task
+msgid "Auto-create on stage change"
+msgstr "Crear automáticamente al cambiar de etapa"
+
+#. module: pc_crm_to_task
+msgid "Auto-create task on entry"
+msgstr "Crear tarea automáticamente al entrar en esta etapa"
+
+#. module: pc_crm_to_task
+msgid "Behavior"
+msgstr "Comportamiento"
+
+#. module: pc_crm_to_task
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: pc_crm_to_task
+msgid "Company defaults"
+msgstr "Valores por defecto de empresa"
+
+#. module: pc_crm_to_task
+msgid "Copy lead followers to task"
+msgstr "Copiar seguidores de la oportunidad a la tarea"
+
+#. module: pc_crm_to_task
+msgid "CRM → Task (Process Control)"
+msgstr "CRM → Tarea (Process Control)"
+
+#. module: pc_crm_to_task
+msgid "CRM → Task automation"
+msgstr "Automatización CRM → Tarea"
+
+#. module: pc_crm_to_task
+msgid "CRM → Task defaults"
+msgstr "Valores por defecto CRM → Tarea"
+
+#. module: pc_crm_to_task
+msgid "CRM → Task: notification to assignees"
+msgstr "CRM → Tarea: notificación a responsables"
+
+#. module: pc_crm_to_task
+msgid "Create activity for assignees"
+msgstr "Crear actividad para los responsables"
+
+#. module: pc_crm_to_task
+msgid "Create activity on auto-create"
+msgstr "Crear actividad en la creación automática"
+
+#. module: pc_crm_to_task
+msgid "Create directly if defaults are complete"
+msgstr "Crear directamente si los valores por defecto están completos"
+
+#. module: pc_crm_to_task
+msgid "Create task"
+msgstr "Crear tarea"
+
+#. module: pc_crm_to_task
+msgid "Create task from lead"
+msgstr "Crear tarea desde oportunidad"
+
+#. module: pc_crm_to_task
+msgid "CRM: Tarea creada desde oportunidad"
+msgstr "CRM: Tarea creada desde oportunidad"
+
+#. module: pc_crm_to_task
+msgid "Customer"
+msgstr "Cliente"
+
+#. module: pc_crm_to_task
+msgid "Deadline"
+msgstr "Fecha límite"
+
+#. module: pc_crm_to_task
+msgid "Default assignees"
+msgstr "Responsables por defecto"
+
+#. module: pc_crm_to_task
+msgid "Default assignees for CRM → Task"
+msgstr "Responsables por defecto para CRM → Tarea"
+
+#. module: pc_crm_to_task
+msgid "Default project for CRM → Task"
+msgstr "Proyecto por defecto para CRM → Tarea"
+
+#. module: pc_crm_to_task
+msgid "Default responsibles"
+msgstr "Responsables por defecto"
+
+#. module: pc_crm_to_task
+msgid "Default responsible strategy"
+msgstr "Estrategia para asignar responsables por defecto"
+
+#. module: pc_crm_to_task
+msgid "Default tags"
+msgstr "Etiquetas por defecto"
+
+#. module: pc_crm_to_task
+msgid "Default tags for CRM → Task"
+msgstr "Etiquetas por defecto para CRM → Tarea"
+
+#. module: pc_crm_to_task
+msgid "Default task stage"
+msgstr "Etapa de tarea por defecto"
+
+#. module: pc_crm_to_task
+msgid "Default task stage for CRM → Task"
+msgstr "Etapa de tarea por defecto para CRM → Tarea"
+
+#. module: pc_crm_to_task
+msgid "Description"
+msgstr "Descripción"
+
+#. module: pc_crm_to_task
+msgid "Enable auto-create task on CRM stage change"
+msgstr "Activar creación automática de tarea al cambiar de etapa CRM"
+
+#. module: pc_crm_to_task
+msgid "Forced project for auto-creation"
+msgstr "Proyecto forzado para la creación automática"
+
+#. module: pc_crm_to_task
+msgid "From opportunity"
+msgstr "Desde oportunidad"
+
+#. module: pc_crm_to_task
+msgid "Important"
+msgstr "Importante"
+
+#. module: pc_crm_to_task
+msgid "Lead"
+msgstr "Oportunidad"
+
+#. module: pc_crm_to_task
+msgid "Leave empty"
+msgstr "Dejar vacío"
+
+#. module: pc_crm_to_task
+msgid "Move from lead to task"
+msgstr "Mover de oportunidad a tarea"
+
+#. module: pc_crm_to_task
+msgid "Move lead attachments to task"
+msgstr "Mover adjuntos de la oportunidad a la tarea"
+
+#. module: pc_crm_to_task
+msgid "Move lead chatter to task"
+msgstr "Mover historial de la oportunidad a la tarea"
+
+#. module: pc_crm_to_task
+msgid "Normal"
+msgstr "Normal"
+
+#. module: pc_crm_to_task
+msgid "Notification mail template"
+msgstr "Plantilla de correo de notificación"
+
+#. module: pc_crm_to_task
+msgid "Notification mail template (override)"
+msgstr "Plantilla de correo de notificación (sobreescribe empresa)"
+
+#. module: pc_crm_to_task
+msgid "Notifications"
+msgstr "Notificaciones"
+
+#. module: pc_crm_to_task
+msgid "Open wizard only when defaults are incomplete"
+msgstr "Abrir el asistente solo cuando faltan valores por defecto"
+
+#. module: pc_crm_to_task
+msgid "Opportunity"
+msgstr "Oportunidad"
+
+#. module: pc_crm_to_task
+msgid "Originating opportunity"
+msgstr "Oportunidad de origen"
+
+#. module: pc_crm_to_task
+msgid "Priority"
+msgstr "Prioridad"
+
+#. module: pc_crm_to_task
+msgid "Project"
+msgstr "Proyecto"
+
+#. module: pc_crm_to_task
+msgid "Send mail on auto-create"
+msgstr "Enviar correo en la creación automática"
+
+#. module: pc_crm_to_task
+msgid "Send notification mail"
+msgstr "Enviar correo de notificación"
+
+#. module: pc_crm_to_task
+msgid "Send notification mail to assignees"
+msgstr "Enviar correo de notificación a los responsables"
+
+#. module: pc_crm_to_task
+msgid "Show 'Opportunity' smart button on task"
+msgstr "Mostrar botón inteligente 'Oportunidad' en la tarea"
+
+#. module: pc_crm_to_task
+msgid "Skip auto-create if lead already has a task"
+msgstr "Omitir creación automática si la oportunidad ya tiene tarea"
+
+#. module: pc_crm_to_task
+msgid "Stage"
+msgstr "Etapa"
+
+#. module: pc_crm_to_task
+msgid "Task from opportunity"
+msgstr "Tarea desde oportunidad"
+
+#. module: pc_crm_to_task
+msgid "Task name"
+msgstr "Nombre de la tarea"
+
+#. module: pc_crm_to_task
+msgid "Tags"
+msgstr "Etiquetas"
+
+#. module: pc_crm_to_task
+msgid "Transfer and notifications"
+msgstr "Transferencias y notificaciones"
+
+#. module: pc_crm_to_task
+msgid "Transfers"
+msgstr "Transferencias"
+
+#. module: pc_crm_to_task
+msgid "Use company default users"
+msgstr "Usar responsables por defecto de empresa"
+
+#. module: pc_crm_to_task
+msgid "Use CRM team default (fallback company)"
+msgstr "Usar el equipo CRM (fallback empresa)"
+
+#. module: pc_crm_to_task
+msgid "Use lead salesperson"
+msgstr "Usar el comercial de la oportunidad"
+
+#. module: pc_crm_to_task
+msgid "UX"
+msgstr "UX"
+
+#. module: pc_crm_to_task
+msgid "Wizard to create a project task from a CRM lead"
+msgstr "Asistente para crear una tarea de proyecto desde una oportunidad CRM"
+
+#. module: pc_crm_to_task
+msgid "What to move from the lead to the new task."
+msgstr "Qué mover de la oportunidad a la nueva tarea."
+
+#. module: pc_crm_to_task
+msgid "# tasks"
+msgstr "# tareas"

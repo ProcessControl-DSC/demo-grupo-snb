@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_project_task_form_inherit_pc_crm_to_task" model="ir.ui.view">
+        <field name="name">project.task.form.inherit.pc_crm_to_task</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_form2"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button name="action_pc_view_lead"
+                        type="object"
+                        class="oe_stat_button"
+                        icon="fa-bullseye"
+                        invisible="not pc_lead_id">
+                    <div class="o_stat_info">
+                        <span class="o_stat_text">Opportunity</span>
+                    </div>
+                </button>
+            </xpath>
+
+        </field>
+    </record>
+
+    <record id="view_project_task_search_inherit_pc_crm_to_task" model="ir.ui.view">
+        <field name="name">project.task.search.inherit.pc_crm_to_task</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_search_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//search" position="inside">
+                <filter name="pc_filter_with_lead"
+                        string="From opportunity"
+                        domain="[('pc_lead_id', '!=', False)]"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

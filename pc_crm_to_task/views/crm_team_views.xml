@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_crm_team_form_inherit_pc_crm_to_task" model="ir.ui.view">
+        <field name="name">crm.team.form.inherit.pc_crm_to_task</field>
+        <field name="model">crm.team</field>
+        <field name="inherit_id" ref="sales_team.crm_team_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="inside">
+                <group string="CRM → Task defaults" name="pc_crm_to_task_defaults">
+                    <field name="pc_default_project_id"/>
+                    <field name="pc_default_task_stage_id"/>
+                    <field name="pc_default_task_user_ids" widget="many2many_tags"/>
+                    <field name="pc_default_task_tag_ids" widget="many2many_tags"/>
+                    <field name="pc_mail_template_id"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

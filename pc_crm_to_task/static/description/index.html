@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<title>PC CRM to Task — Process Control</title>
+</head>
+<body>
+<div style="max-width:1000px; margin:0 auto; font-family:'Inter','Segoe UI',sans-serif; color:#334155; font-size:14px; padding:24px;">
+
+<h2 style="color:#0f4c81; border-bottom:2px solid #0f4c81; padding-bottom:6px; margin-top:0;">
+  PC CRM to Task
+</h2>
+
+<p>
+  Módulo base de área de Process Control que añade un botón <em>Crear tarea</em>
+  en las oportunidades de CRM y permite configurar a cinco niveles distintos
+  qué proyecto, responsables, etapa, etiquetas y notificaciones se aplican
+  al crear la tarea.
+</p>
+
+<h3 style="color:#0f4c81; margin-top:18px;">Funcionalidades clave</h3>
+<table style="width:100%; border-collapse:collapse; border-radius:8px; overflow:hidden; box-shadow:0 1px 3px rgba(0,0,0,0.08);">
+  <tr style="background:linear-gradient(135deg,#0f4c81,#1e6dba); color:#fff;">
+    <th style="padding:10px; text-align:left;">Área</th>
+    <th style="padding:10px; text-align:left;">Detalle</th>
+  </tr>
+  <tr style="background:#f1f6fb;">
+    <td style="padding:10px;"><strong>Botón en oportunidad</strong></td>
+    <td style="padding:10px;">Aparece en la cabecera del formulario CRM, visible para el grupo Project / User.</td>
+  </tr>
+  <tr>
+    <td style="padding:10px;"><strong>Asistente completo</strong></td>
+    <td style="padding:10px;">Proyecto, etapa, responsables múltiples, etiquetas, cliente, fecha límite, prioridad, descripción.</td>
+  </tr>
+  <tr style="background:#f1f6fb;">
+    <td style="padding:10px;"><strong>5 niveles de defaults</strong></td>
+    <td style="padding:10px;">Ajustes globales, empresa, equipo CRM, etapa CRM, asistente. Jerarquía: etapa &gt; equipo &gt; empresa &gt; vacío.</td>
+  </tr>
+  <tr>
+    <td style="padding:10px;"><strong>3 modos de comportamiento</strong></td>
+    <td style="padding:10px;">Siempre asistente / asistente si faltan datos / directo si hay defaults.</td>
+  </tr>
+  <tr style="background:#f1f6fb;">
+    <td style="padding:10px;"><strong>Transferencias</strong></td>
+    <td style="padding:10px;">Historial de chatter, adjuntos y seguidores se pueden mover (o no) a la nueva tarea.</td>
+  </tr>
+  <tr>
+    <td style="padding:10px;"><strong>Creación automática por etapa</strong></td>
+    <td style="padding:10px;">Marca una etapa CRM y, al mover la oportunidad allí, la tarea se crea sola. Doble kill switch (global y por etapa).</td>
+  </tr>
+  <tr style="background:#f1f6fb;">
+    <td style="padding:10px;"><strong>Notificaciones</strong></td>
+    <td style="padding:10px;">Correo (plantilla configurable, una entregada por defecto con norma gráfica Process Control) y/o actividad para los asignados.</td>
+  </tr>
+  <tr>
+    <td style="padding:10px;"><strong>Smart buttons</strong></td>
+    <td style="padding:10px;">Botón <em>Tareas</em> en la oportunidad y botón <em>Oportunidad</em> en la tarea.</td>
+  </tr>
+</table>
+
+<h3 style="color:#0f4c81; margin-top:18px;">Jerarquía de resolución de defaults</h3>
+<div style="padding:12px 16px; border-left:4px solid #0f4c81; background:#f1f6fb; border-radius:4px;">
+  <strong>Regla de oro:</strong> el valor más específico gana.
+  Para cada campo el módulo evalúa, por este orden:
+  <strong>asistente &gt; etapa CRM &gt; equipo CRM &gt; empresa &gt; vacío</strong>.
+  Cuando el campo no aparece en el asistente (modo directo), se aplica la
+  jerarquía a partir de la etapa hacia abajo.
+</div>
+
+<h3 style="color:#0f4c81; margin-top:18px;">Configuración inicial</h3>
+<table style="width:100%; border-collapse:collapse; border-radius:8px; overflow:hidden;">
+  <tr style="background:linear-gradient(135deg,#0f4c81,#1e6dba); color:#fff;">
+    <th style="padding:8px; text-align:left;">Paso</th>
+    <th style="padding:8px; text-align:left;">Acción</th>
+  </tr>
+  <tr style="background:#f1f6fb;">
+    <td style="padding:8px;"><strong>1</strong></td>
+    <td style="padding:8px;">Instalar el módulo <code>pc_crm_to_task</code>.</td>
+  </tr>
+  <tr>
+    <td style="padding:8px;"><strong>2</strong></td>
+    <td style="padding:8px;">Ir a <em>Ajustes &gt; CRM &gt; CRM → Task (Process Control)</em>.</td>
+  </tr>
+  <tr style="background:#f1f6fb;">
+    <td style="padding:8px;"><strong>3</strong></td>
+    <td style="padding:8px;">Elegir modo, estrategia de responsables y valores por defecto de empresa.</td>
+  </tr>
+  <tr>
+    <td style="padding:8px;"><strong>4</strong></td>
+    <td style="padding:8px;">(Opcional) En cada equipo CRM, definir overrides específicos del equipo.</td>
+  </tr>
+  <tr style="background:#f1f6fb;">
+    <td style="padding:8px;"><strong>5</strong></td>
+    <td style="padding:8px;">(Opcional) En las etapas CRM que cierren oportunidades (p.ej. <em>Ganado</em>), activar la creación automática.</td>
+  </tr>
+</table>
+
+<div style="margin-top:24px; padding:12px 16px; border-left:4px solid #b25400; background:#fff4e6; border-radius:4px;">
+  <strong>Aviso:</strong> mover el historial de chatter del lead a la tarea
+  vacía la cronología visible en la oportunidad. Si se prefiere mantenerla
+  en el lead, desactivar <em>Mover historial de la oportunidad a la tarea</em>
+  en los ajustes globales o en el asistente.
+</div>
+
+<p style="margin-top:24px; color:#64748b; font-size:12px;">
+  Process Control — módulo base de área. Licencia LGPL-3.
+</p>
+
+</div>
+</body>
+</html>

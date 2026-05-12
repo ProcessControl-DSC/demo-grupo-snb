@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo noupdate="1">
+
+    <record id="mail_activity_data_task_from_lead" model="mail.activity.type">
+        <field name="name">Task from opportunity</field>
+        <field name="summary">Review task created from opportunity</field>
+        <field name="icon">fa-tasks</field>
+        <field name="res_model">project.task</field>
+        <field name="delay_count">2</field>
+        <field name="delay_unit">days</field>
+    </record>
+
+</odoo>
