@@ -7,53 +7,144 @@
         <field name="inherit_id" ref="crm.res_config_settings_view_form"/>
         <field name="arch" type="xml">
             <xpath expr="//app[@name='crm']" position="inside">
-                <block title="CRM → Task (Process Control)" id="pc_crm_to_task_settings">
-                    <setting id="pc_crm_to_task_behavior"
-                             string="Behavior"
+
+                <!-- ============================================================
+                     Block 1 — Behaviour
+                     ============================================================ -->
+                <block title="CRM → Task — behaviour" id="pc_crm_to_task_behavior_block">
+
+                    <setting id="pc_crm_to_task_behavior_setting"
+                             string="Button behaviour"
                              help="How the 'Create task' button behaves on opportunities.">
-                        <field name="pc_crm_to_task_behavior_mode"/>
+                        <field name="pc_crm_to_task_behavior_mode" widget="radio"/>
                     </setting>
-                    <setting id="pc_crm_to_task_responsible"
-                             string="Default responsibles"
+
+                    <setting id="pc_crm_to_task_responsible_setting"
+                             string="Default assignees source"
                              help="Where to pick default assignees from when creating a task.">
-                        <field name="pc_crm_to_task_responsible_strategy"/>
+                        <field name="pc_crm_to_task_responsible_strategy" widget="radio"/>
                     </setting>
-                    <setting id="pc_crm_to_task_defaults_company"
-                             string="Company defaults"
-                             help="Defaults used when no team-level value exists.">
-                        <field name="pc_default_project_id"/>
-                        <field name="pc_default_task_stage_id"/>
-                        <field name="pc_default_task_user_ids" widget="many2many_tags"/>
-                        <field name="pc_default_task_tag_ids" widget="many2many_tags"/>
-                    </setting>
-                    <setting id="pc_crm_to_task_transfers"
-                             string="Transfers"
-                             help="What to move from the lead to the new task.">
-                        <field name="pc_crm_to_task_transfer_messages"/>
-                        <field name="pc_crm_to_task_transfer_attachments"/>
-                        <field name="pc_crm_to_task_transfer_followers"/>
-                        <field name="pc_crm_to_task_archive_lead"/>
-                    </setting>
-                    <setting id="pc_crm_to_task_auto_stage"
-                             string="Auto-create on stage change"
-                             help="Allow CRM stages to auto-create a task when a lead enters them.">
-                        <field name="pc_crm_to_task_enable_auto_on_stage"/>
-                        <field name="pc_crm_to_task_skip_if_lead_has_task"/>
-                    </setting>
-                    <setting id="pc_crm_to_task_notifications"
-                             string="Notifications"
-                             help="Send mail and/or create activity for assignees when a task is created.">
-                        <field name="pc_crm_to_task_send_mail"/>
-                        <field name="pc_crm_to_task_create_activity"/>
-                        <field name="pc_mail_template_id"/>
-                        <field name="pc_activity_type_id"/>
-                    </setting>
+
                     <setting id="pc_crm_to_task_smart_button"
-                             string="UX"
+                             string="'Opportunity' smart button"
                              help="Show an 'Opportunity' smart button on tasks created from a lead.">
                         <field name="pc_crm_to_task_link_back"/>
                     </setting>
+
                 </block>
+
+                <!-- ============================================================
+                     Block 2 — Company defaults (one setting per field)
+                     ============================================================ -->
+                <block title="CRM → Task — company defaults" id="pc_crm_to_task_company_defaults_block">
+
+                    <setting id="pc_crm_to_task_default_project"
+                             string="Default project"
+                             help="Project where the task is created when no override exists at team or stage level.">
+                        <field name="pc_default_project_id"/>
+                    </setting>
+
+                    <setting id="pc_crm_to_task_default_stage"
+                             string="Default task stage"
+                             help="Initial stage applied to the new task.">
+                        <field name="pc_default_task_stage_id"/>
+                    </setting>
+
+                    <setting id="pc_crm_to_task_default_users"
+                             string="Default assignees"
+                             help="Users assigned to the task when no team-level value is set and the strategy is 'team default' or 'company default'.">
+                        <field name="pc_default_task_user_ids" widget="many2many_tags"/>
+                    </setting>
+
+                    <setting id="pc_crm_to_task_default_tags"
+                             string="Default tags"
+                             help="Tags copied to the new task by default.">
+                        <field name="pc_default_task_tag_ids" widget="many2many_tags"/>
+                    </setting>
+
+                </block>
+
+                <!-- ============================================================
+                     Block 3 — Transfers from lead to task
+                     ============================================================ -->
+                <block title="CRM → Task — transfers" id="pc_crm_to_task_transfers_block">
+
+                    <setting id="pc_crm_to_task_t_messages"
+                             string="Move chatter"
+                             help="Move the lead chatter to the new task on creation.">
+                        <field name="pc_crm_to_task_transfer_messages"/>
+                    </setting>
+
+                    <setting id="pc_crm_to_task_t_attachments"
+                             string="Move attachments"
+                             help="Move attachments from the lead to the new task.">
+                        <field name="pc_crm_to_task_transfer_attachments"/>
+                    </setting>
+
+                    <setting id="pc_crm_to_task_t_followers"
+                             string="Copy followers"
+                             help="Subscribe lead followers to the new task.">
+                        <field name="pc_crm_to_task_transfer_followers"/>
+                    </setting>
+
+                    <setting id="pc_crm_to_task_t_archive"
+                             string="Archive lead on convert"
+                             help="Set the lead to inactive after the task is created.">
+                        <field name="pc_crm_to_task_archive_lead"/>
+                    </setting>
+
+                </block>
+
+                <!-- ============================================================
+                     Block 4 — Automation on CRM stage change
+                     ============================================================ -->
+                <block title="CRM → Task — stage automation" id="pc_crm_to_task_stage_auto_block">
+
+                    <setting id="pc_crm_to_task_auto_enable"
+                             string="Enable stage automation"
+                             help="Allow CRM stages flagged as 'auto-create task' to create the task automatically when a lead enters them.">
+                        <field name="pc_crm_to_task_enable_auto_on_stage"/>
+                    </setting>
+
+                    <setting id="pc_crm_to_task_auto_skip"
+                             string="Skip if lead has task"
+                             help="Avoid creating a duplicate task if the lead already has at least one task linked.">
+                        <field name="pc_crm_to_task_skip_if_lead_has_task"/>
+                    </setting>
+
+                </block>
+
+                <!-- ============================================================
+                     Block 5 — Notifications to assignees
+                     ============================================================ -->
+                <block title="CRM → Task — notifications" id="pc_crm_to_task_notifications_block">
+
+                    <setting id="pc_crm_to_task_n_mail"
+                             string="Send notification email"
+                             help="Send the configured mail template to the assignees when a task is created from a lead.">
+                        <field name="pc_crm_to_task_send_mail"/>
+                    </setting>
+
+                    <setting id="pc_crm_to_task_n_activity"
+                             string="Create activity"
+                             help="Create a calendar activity for the assignees when a task is created from a lead.">
+                        <field name="pc_crm_to_task_create_activity"/>
+                    </setting>
+
+                    <setting id="pc_crm_to_task_n_template"
+                             string="Mail template"
+                             help="Template used when 'Send notification email' is enabled.">
+                        <field name="pc_mail_template_id"/>
+                    </setting>
+
+                    <setting id="pc_crm_to_task_n_activity_type"
+                             string="Activity type"
+                             help="Activity type used when 'Create activity' is enabled.">
+                        <field name="pc_activity_type_id"/>
+                    </setting>
+
+                </block>
+
             </xpath>
         </field>
     </record>

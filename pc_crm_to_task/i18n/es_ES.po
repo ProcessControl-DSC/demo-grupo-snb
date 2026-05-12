@@ -727,3 +727,156 @@ msgstr "De dónde tomar los responsables por defecto al crear una tarea."
 #: model:ir.model,name:pc_crm_to_task.model_crm_lead_to_task_wizard
 msgid "Wizard to create a project task from a CRM lead"
 msgstr "Asistente para crear una tarea de proyecto desde una oportunidad CRM"
+
+#. module: pc_crm_to_task
+msgid "CRM → Task — behaviour"
+msgstr "CRM → Tarea — comportamiento"
+
+#. module: pc_crm_to_task
+msgid "CRM → Task — company defaults"
+msgstr "CRM → Tarea — valores por defecto de empresa"
+
+#. module: pc_crm_to_task
+msgid "CRM → Task — transfers"
+msgstr "CRM → Tarea — transferencias"
+
+#. module: pc_crm_to_task
+msgid "CRM → Task — stage automation"
+msgstr "CRM → Tarea — automatización por etapa"
+
+#. module: pc_crm_to_task
+msgid "CRM → Task — notifications"
+msgstr "CRM → Tarea — notificaciones"
+
+#. module: pc_crm_to_task
+msgid "Button behaviour"
+msgstr "Comportamiento del botón"
+
+#. module: pc_crm_to_task
+msgid "Default assignees source"
+msgstr "Origen de los responsables por defecto"
+
+#. module: pc_crm_to_task
+msgid "'Opportunity' smart button"
+msgstr "Botón inteligente «Oportunidad»"
+
+#. module: pc_crm_to_task
+msgid "Default project"
+msgstr "Proyecto por defecto"
+
+#. module: pc_crm_to_task
+msgid ""
+"Project where the task is created when no override exists at team or stage "
+"level."
+msgstr ""
+"Proyecto en el que se crea la tarea cuando no hay sobreescritura a nivel de "
+"equipo o de etapa."
+
+#. module: pc_crm_to_task
+msgid "Initial stage applied to the new task."
+msgstr "Etapa inicial aplicada a la nueva tarea."
+
+#. module: pc_crm_to_task
+msgid ""
+"Users assigned to the task when no team-level value is set and the strategy "
+"is 'team default' or 'company default'."
+msgstr ""
+"Usuarios asignados a la tarea cuando no hay un valor a nivel de equipo y la "
+"estrategia es «valor por defecto del equipo» o «valor por defecto de "
+"empresa»."
+
+#. module: pc_crm_to_task
+msgid "Tags copied to the new task by default."
+msgstr "Etiquetas copiadas por defecto a la nueva tarea."
+
+#. module: pc_crm_to_task
+msgid "Move chatter"
+msgstr "Mover historial"
+
+#. module: pc_crm_to_task
+msgid "Move the lead chatter to the new task on creation."
+msgstr "Mueve el historial de la oportunidad a la nueva tarea al crearla."
+
+#. module: pc_crm_to_task
+msgid "Move attachments"
+msgstr "Mover adjuntos"
+
+#. module: pc_crm_to_task
+msgid "Move attachments from the lead to the new task."
+msgstr "Mueve los adjuntos de la oportunidad a la nueva tarea."
+
+#. module: pc_crm_to_task
+msgid "Copy followers"
+msgstr "Copiar seguidores"
+
+#. module: pc_crm_to_task
+msgid "Subscribe lead followers to the new task."
+msgstr "Suscribe los seguidores de la oportunidad a la nueva tarea."
+
+#. module: pc_crm_to_task
+msgid "Set the lead to inactive after the task is created."
+msgstr "Archiva la oportunidad después de crear la tarea."
+
+#. module: pc_crm_to_task
+msgid "Enable stage automation"
+msgstr "Activar automatización por etapa"
+
+#. module: pc_crm_to_task
+msgid ""
+"Allow CRM stages flagged as 'auto-create task' to create the task "
+"automatically when a lead enters them."
+msgstr ""
+"Permite que las etapas CRM marcadas como «crear tarea automáticamente» creen"
+" la tarea sola cuando una oportunidad entra en ellas."
+
+#. module: pc_crm_to_task
+msgid "Skip if lead has task"
+msgstr "Omitir si la oportunidad ya tiene tarea"
+
+#. module: pc_crm_to_task
+msgid ""
+"Avoid creating a duplicate task if the lead already has at least one task "
+"linked."
+msgstr ""
+"Evita crear una tarea duplicada si la oportunidad ya tiene al menos una "
+"tarea vinculada."
+
+#. module: pc_crm_to_task
+msgid "Send notification email"
+msgstr "Enviar correo de notificación"
+
+#. module: pc_crm_to_task
+msgid ""
+"Send the configured mail template to the assignees when a task is created "
+"from a lead."
+msgstr ""
+"Envía la plantilla de correo configurada a los responsables cuando se crea "
+"una tarea desde una oportunidad."
+
+#. module: pc_crm_to_task
+msgid "Create activity"
+msgstr "Crear actividad"
+
+#. module: pc_crm_to_task
+msgid ""
+"Create a calendar activity for the assignees when a task is created from a "
+"lead."
+msgstr ""
+"Crea una actividad de calendario para los responsables cuando se crea una "
+"tarea desde una oportunidad."
+
+#. module: pc_crm_to_task
+msgid "Mail template"
+msgstr "Plantilla de correo"
+
+#. module: pc_crm_to_task
+msgid "Template used when 'Send notification email' is enabled."
+msgstr "Plantilla usada cuando «Enviar correo de notificación» está activado."
+
+#. module: pc_crm_to_task
+msgid "Activity type"
+msgstr "Tipo de actividad"
+
+#. module: pc_crm_to_task
+msgid "Activity type used when 'Create activity' is enabled."
+msgstr "Tipo de actividad usado cuando «Crear actividad» está activado."
