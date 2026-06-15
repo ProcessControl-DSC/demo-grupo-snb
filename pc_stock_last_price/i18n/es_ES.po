@@ -1,0 +1,32 @@
+# Spanish translation for pc_stock_last_price.
+# Copyright 2026 Process Control.
+msgid ""
+msgstr ""
+"Project-Id-Version: pc_stock_last_price 19.0.1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-06-15\n"
+"Language-Team: \n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. module: pc_stock_last_price
+#: model:ir.model.fields,field_description:pc_stock_last_price.field_product_category__last_price_update_enabled
+msgid "Use last purchase price"
+msgstr "Usar precio de la última compra"
+
+#. module: pc_stock_last_price
+#: model:ir.model.fields,help:pc_stock_last_price.field_product_category__last_price_update_enabled
+msgid "When enabled, the standard price of products in this category is automatically updated with the unit price of every received purchase. Works on top of the regular costing method."
+msgstr "Si está activado, el coste estándar de los productos de esta categoría se actualiza automáticamente con el precio unitario de cada compra recibida. Funciona sobre el método de coste habitual."
+
+#. module: pc_stock_last_price
+#: model:ir.model,name:pc_stock_last_price.model_product_category
+msgid "Product Category"
+msgstr "Categoría de producto"
+
+#. module: pc_stock_last_price
+#: model:ir.model,name:pc_stock_last_price.model_stock_move
+msgid "Stock Move"
+msgstr "Movimiento de existencias"

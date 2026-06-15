@@ -1,0 +1,4 @@
+[submodule "third-party-addons/OCA/bank-payment"]
+	path = third-party-addons/OCA/bank-payment
+	url = https://github.com/OCA/bank-payment.git
+	branch = 19.0
