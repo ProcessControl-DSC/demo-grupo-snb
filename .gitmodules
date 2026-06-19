@@ -2,3 +2,23 @@
 	path = third-party-addons/OCA/bank-payment
 	url = https://github.com/OCA/bank-payment.git
 	branch = 19.0
+[submodule "third-party-addons/OCA/server-ux"]
+	path = third-party-addons/OCA/server-ux
+	url = https://github.com/OCA/server-ux.git
+	branch = 19.0
+[submodule "third-party-addons/OCA/account-invoicing"]
+	path = third-party-addons/OCA/account-invoicing
+	url = https://github.com/OCA/account-invoicing.git
+	branch = 19.0
+[submodule "third-party-addons/OCA/project"]
+	path = third-party-addons/OCA/project
+	url = https://github.com/OCA/project.git
+	branch = 19.0
+[submodule "third-party-addons/OCA/sale-workflow"]
+	path = third-party-addons/OCA/sale-workflow
+	url = https://github.com/OCA/sale-workflow.git
+	branch = 19.0
+[submodule "third-party-addons/OCA/account-payment"]
+	path = third-party-addons/OCA/account-payment
+	url = https://github.com/OCA/account-payment.git
+	branch = 19.0
