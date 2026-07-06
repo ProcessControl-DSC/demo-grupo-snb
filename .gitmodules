@@ -26,3 +26,7 @@
 	path = third-party-addons/OCA/contract
 	url = https://github.com/OCA/contract.git
 	branch = 19.0
+[submodule "third-party-addons/OCA/account-analytic"]
+	path = third-party-addons/OCA/account-analytic
+	url = https://github.com/OCA/account-analytic.git
+	branch = 19.0
